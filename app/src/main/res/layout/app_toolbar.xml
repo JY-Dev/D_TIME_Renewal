@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.jydev.d_time_renewal.ui.main.MainViewModel" />
+    </data>
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/app_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:paddingTop="40dp">
+
+
+    <Button
+        android:id="@+id/drawer_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/outline_menu_black_36"
+        android:layout_marginStart="32dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:visibility="gone"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/icons_8_left_96"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:fontFamily="@font/font"
+        android:text="@={mainViewModel.title}"/>
+
+
+</androidx.appcompat.widget.Toolbar>
+</layout>
