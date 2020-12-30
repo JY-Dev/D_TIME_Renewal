@@ -12,7 +12,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class TodoData(
     @PrimaryKey(autoGenerate = true) val id: Long,
-    val date: String,
-    val title: String,
-    val isClear : Boolean
+    var date: String,
+    var title: String,
+    var isClear : Boolean
 )

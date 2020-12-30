@@ -1,9 +1,13 @@
 package com.jydev.d_time_renewal.extension
 
+import android.widget.CheckBox
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
+import com.jydev.d_time_renewal.model.TodoData
 import com.jydev.d_time_renewal.ui.main.MainPagerAdapter
 import com.jydev.d_time_renewal.ui.main.MainPage
 
@@ -37,4 +41,16 @@ fun addOnPageChangeListener(view : ViewPager , title : MutableLiveData<String>){
 @BindingAdapter("bind:recyclerViewAdapter")
 fun setAdapter(view: RecyclerView, baseAdapter: RecyclerView.Adapter<*>) {
     view.adapter = baseAdapter
+}
+
+@BindingAdapter("bind:checkedUpdate")
+fun setOnCheckedChangeListener(view : CheckBox , isCleared : MutableLiveData<Boolean>){
+    view.setOnCheckedChangeListener { _, isChecked ->
+        isCleared.postValue(isChecked)
+    }
+}
+
+@BindingAdapter("bind:setPaintFlag")
+fun setPaintFlag(view : TextView , isCleared: MutableLiveData<Boolean>){
+    view.paintFlags
 }

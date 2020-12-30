@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
+        <import type="androidx.lifecycle.MutableLiveData"/>
+        <variable
+            name="isClear"
+            type="MutableLiveData&lt;Boolean>" />
         <variable
             name="todo"
             type="com.jydev.d_time_renewal.model.TodoData" />
+        <variable
+            name="todoViewModel"
+            type="com.jydev.d_time_renewal.ui.main.todo.TodoViewModel" />
     </data>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,7 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:checked="false"
+        android:checked="@{todo.clear}"
+        bind:checkedUpdate="@{isClear}"
         android:button="@drawable/todo_checkbox"/>
 
     <RelativeLayout

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="adapter"
+            type="com.jydev.d_time_renewal.ui.main.todo.adapter.TodoAdapter" />
+    </data>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -36,6 +43,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/todo_listview"
                     android:layout_width="match_parent"
+                    bind:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    bind:recyclerViewAdapter="@{adapter}"
                     android:layout_height="174dp"/>
 
                 <LinearLayout
@@ -226,3 +235,4 @@
     </ScrollView>
 
 </LinearLayout>
+</layout>
