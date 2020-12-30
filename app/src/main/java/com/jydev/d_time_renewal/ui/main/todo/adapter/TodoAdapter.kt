@@ -18,19 +18,18 @@ import com.jydev.d_time_renewal.data.TodoRepositoryImpl
 import com.jydev.d_time_renewal.databinding.TodoItemBinding
 import com.jydev.d_time_renewal.model.TodoData
 
-class TodoAdapter : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+class TodoAdapter(val todoData : MutableLiveData<TodoData>) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
     var todoList = mutableListOf<TodoData>(TodoData(0L,"dd","sdf",false),TodoData(0L,"dd","sdf",false),TodoData(0L,"dd","sdf",false))
 
     inner class TodoViewHolder(private val binding : TodoItemBinding , val context : LifecycleOwner) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item : TodoData){
             binding.apply {
                 isClear = MutableLiveData<Boolean>().apply {
-
                     observe(context, Observer {
                         binding.titleTodo.paintFlags = if (it) Paint.STRIKE_THRU_TEXT_FLAG else Paint.HINTING_OFF
-                        item.apply {
+                        todoData.postValue(item.apply {
                             isClear = it
-                        }
+                        })
                     })
                 }
                 todo = item
