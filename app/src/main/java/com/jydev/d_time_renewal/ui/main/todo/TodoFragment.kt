@@ -32,7 +32,7 @@ class TodoFragment : BaseFragment<TodoData>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.todoStatusData.statusTodoObserve(this)
-        viewModel.calendarLiveData.statusCalendarObserve(this)
+        viewModel.calendarLiveData.calendarObserve(this)
     }
 
     override fun onAttach(context: Context) {
@@ -65,13 +65,16 @@ class TodoFragment : BaseFragment<TodoData>() {
             when(it.status){
                 is TodoStatus.Delete -> it.todoData.delete()
                 is TodoStatus.Update -> it.todoData.update()
-                is TodoStatus.Add -> { it.todoData.insert() }
+                is TodoStatus.Add -> it.todoData.insert()
             }
             refreshTodoList(viewModel.calendarLiveData.value!!.getDate())
         })
     }
 
-    private fun MutableLiveData<Calendar>.statusCalendarObserve(lifecycle: LifecycleOwner){
+    /**
+     * 캘린더 상태
+     */
+    private fun MutableLiveData<Calendar>.calendarObserve(lifecycle: LifecycleOwner){
         observe(lifecycle , Observer {
             dialog.dismiss()
             refreshTodoList(it.getDate())
