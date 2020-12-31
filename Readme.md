@@ -3,9 +3,6 @@
 ![unnamed](https://user-images.githubusercontent.com/45057493/103400514-bdfc5c00-4b88-11eb-82c4-01979545d55b.png)
 
 # ♠️DownLoad
-
----
-
 [PlaySotre](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
 
 # ♟️Description
