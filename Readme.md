@@ -23,9 +23,9 @@ Go to [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_t
 - JetPack
     - LiveData -observable data holder class.
     - ViewModel - UI related data holder, Easily schedule asynchronous tasks for optimal execution.
+    - Data Binding
 - [Koin](https://github.com/InsertKoinIO/koin) - dependency injection.
-- MVVM Architecture
-- Data Binding
+- MVVM Architecture 
 
 ## Architecture
 
