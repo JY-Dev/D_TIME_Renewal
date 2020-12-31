@@ -14,7 +14,7 @@
 [기존 프로젝트](https://github.com/JY-Dev/D_TIME)
 
 
-# DownLoad [PlaySotre](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
+# DownLoad [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
 
 # Stack & Libraries
 
