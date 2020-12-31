@@ -9,10 +9,9 @@ import com.jydev.d_time_renewal.databinding.ActivityMainBinding
 import com.jydev.d_time_renewal.ui.main.diary.DiaryFragment
 import com.jydev.d_time_renewal.ui.main.timetable.TimeTableFragment
 import com.jydev.d_time_renewal.ui.main.todo.TodoFragment
-import org.koin.android.viewmodel.ext.android.viewModel
-import org.koin.core.parameter.parametersOf
+import org.koin.core.KoinComponent
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(),KoinComponent {
     val binding by binding<ActivityMainBinding>(R.layout.activity_main)
     val viewModel: MainViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +26,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun getFragmentList(): MutableList<Fragment> = mutableListOf(
-        TimeTableFragment(),
-        TodoFragment(), DiaryFragment()
-    )
+    private fun getFragmentList(): MutableList<Fragment> =
+        mutableListOf(TimeTableFragment(), TodoFragment(), DiaryFragment())
 }
