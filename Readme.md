@@ -9,14 +9,15 @@
     <img src="https://user-images.githubusercontent.com/45057493/103400514-bdfc5c00-4b88-11eb-82c4-01979545d55b.png"/>
 </p>
 
-# Description
+## Description
 기존에 제작했었던 프로젝트를 리펙토링을 통해 좀더 가독성이 좋은 코드로 개선하였습니다.
 [기존 프로젝트](https://github.com/JY-Dev/D_TIME)
 
 
-# DownLoad [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
+## DownLoad 
+Goto PlayStore - [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
 
-# Stack & Libraries
+## Stack & Libraries
 
 - Minimum SDK level 21
 - JetPack
@@ -26,7 +27,7 @@
 - MVVM Architecture
 - Data Binding
 
-# Architecture
+## Architecture
 
 ![image](https://user-images.githubusercontent.com/45057493/103400930-429baa00-4b8a-11eb-85dc-c05cf30c7c39.png)
 
