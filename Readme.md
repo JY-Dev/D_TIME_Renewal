@@ -19,8 +19,6 @@
 
 # ♣️ Stack & Libraries
 
----
-
 - Minimum SDK level 21
 - JetPack
     - LiveData -observable data holder class.
@@ -30,6 +28,5 @@
 
 # 🎮 Architecture
 
----
 
 ![img](https://user-images.githubusercontent.com/45057493/103400571-f4d27200-4b88-11eb-8d0f-9d331db4869c.png)
