@@ -23,6 +23,7 @@
     - LiveData -observable data holder class.
     - ViewModel - UI related data holder, Easily schedule asynchronous tasks for optimal execution.
 - [Koin](https://github.com/InsertKoinIO/koin) - dependency injection.
+- MVVM Architecture
 - Data Binding
 
 # Architecture
