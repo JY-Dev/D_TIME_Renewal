@@ -28,4 +28,5 @@
 
 # 🎮 Architecture
 
-![img](https://user-images.githubusercontent.com/45057493/103400571-f4d27200-4b88-11eb-8d0f-9d331db4869c.png)
+![image](https://user-images.githubusercontent.com/45057493/103400930-429baa00-4b8a-11eb-85dc-c05cf30c7c39.png)
+
