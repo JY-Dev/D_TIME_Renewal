@@ -15,7 +15,7 @@
 
 
 ## DownLoad 
-Goto PlayStore - [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
+Goto [PlayStore](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
 
 ## Stack & Libraries
 
