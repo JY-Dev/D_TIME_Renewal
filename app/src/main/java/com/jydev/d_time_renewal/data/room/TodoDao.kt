@@ -1,7 +1,7 @@
 package com.jydev.d_time_renewal.data.room
 
 import androidx.room.*
-import com.jydev.d_time_renewal.model.TodoData
+import com.jydev.d_time_renewal.model.todo.TodoData
 
 @Dao
 interface TodoDao {
@@ -16,13 +16,13 @@ interface TodoDao {
      * Get Express TodoData
      */
     @Query("SELECT * FROM TodoData WHERE `date` =:date")
-    fun getTodoData(date:String) : MutableList<TodoData>
+    fun getTodo(date:String) : MutableList<TodoData>
 
     /**
      * Update Certain TodoData
      */
     @Update
-    fun updateTodoData(vararg todoData : TodoData)
+    fun update(vararg todoData : TodoData)
 
     /**
      * Insert TodoData
@@ -34,5 +34,5 @@ interface TodoDao {
      * Delete TodoData
      */
     @Delete
-    fun deleteTodoData(vararg todoData : TodoData)
+    fun delete(vararg todoData : TodoData)
 }

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+<layout xmlns:todo="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
     <data>
+        <import type="androidx.lifecycle.MutableLiveData"/>
         <variable
             name="adapter"
             type="com.jydev.d_time_renewal.ui.main.todo.adapter.TodoAdapter" />
+        <variable
+            name="itemDecoration"
+            type="com.jydev.d_time_renewal.ui.main.todo.TodoItemDecoration" />
+        <variable
+            name="todoViewModel"
+            type="com.jydev.d_time_renewal.ui.main.todo.TodoViewModel" />
+        <variable
+            name="calendarDidalog"
+            type="com.jydev.d_time_renewal.ui.dialog.CalendarDialog" />
     </data>
 
 <LinearLayout
@@ -43,8 +54,10 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/todo_listview"
                     android:layout_width="match_parent"
-                    bind:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    bind:recyclerViewAdapter="@{adapter}"
+                    todo:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    todo:recyclerViewAdapter="@{adapter}"
+                    todo:setItemDecoration="@{itemDecoration}"
+                    todo:todoLiveData="@{todoViewModel.todoStatusData}"
                     android:layout_height="174dp"/>
 
                 <LinearLayout
@@ -72,6 +85,7 @@
                         android:id="@+id/add_btn"
                         android:layout_width="32dp"
                         android:layout_height="match_parent"
+                        android:onClick="@{todoViewModel::addTodoData}"
                         android:background="@drawable/plus_btn_back"
                         android:src="@drawable/outline_add_black_48" />
 
@@ -89,6 +103,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
+                            android:text="@={todoViewModel.text}"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/font"
                             android:layout_marginEnd="10dp"/>
@@ -101,11 +116,11 @@
                         android:background="@drawable/plus_btn_back"
                         android:gravity="center">
 
-
                         <Button
                             android:id="@+id/date_btn"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
+                            bind:showCalendarDialog="@{calendarDidalog}"
                             android:background="@drawable/icons_8_calendar_384" />
                     </LinearLayout>
 

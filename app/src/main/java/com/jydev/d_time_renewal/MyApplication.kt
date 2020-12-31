@@ -1,13 +1,10 @@
 package com.jydev.d_time_renewal
 
 import android.app.Application
-import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.jydev.d_time_renewal.data.Repository
 import com.jydev.d_time_renewal.data.TodoRepositoryImpl
 import com.jydev.d_time_renewal.data.room.TodoDB
-import com.jydev.d_time_renewal.model.TodoData
-import io.reactivex.schedulers.Schedulers.single
+import com.jydev.d_time_renewal.model.todo.TodoData
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,13 +17,11 @@ class MyApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@MyApplication)
-            listOf(module)
+            modules(module)
         }
     }
 
     val module = module {
-       /* single { TodoDB.Factory.create(get())}
-        single { get<TodoDB>().todoDao() }*/
-        single { TodoRepositoryImpl() }
+        single<Repository<TodoData>> { TodoRepositoryImpl(TodoDB.Factory.create(get()).todoDao()) }
     }
 }
