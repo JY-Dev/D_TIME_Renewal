@@ -14,9 +14,9 @@
 [기존 프로젝트](https://github.com/JY-Dev/D_TIME)
 
 
-# ♠️ DownLoad [PlaySotre](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
+# DownLoad [PlaySotre](https://play.google.com/store/apps/details?id=com.jaeyoung.d_time)
 
-# ♣️ Stack & Libraries
+# Stack & Libraries
 
 - Minimum SDK level 21
 - JetPack
@@ -25,7 +25,7 @@
 - [Koin](https://github.com/InsertKoinIO/koin) - dependency injection.
 - Data Binding
 
-# 🎮 Architecture
+# Architecture
 
 ![image](https://user-images.githubusercontent.com/45057493/103400930-429baa00-4b8a-11eb-85dc-c05cf30c7c39.png)
 
