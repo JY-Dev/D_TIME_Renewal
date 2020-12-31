@@ -6,12 +6,11 @@
 <img alt="license" src="https://img.shields.io/github/license/hongbeomi/FindTaek?color=blue&logo=apache"/>
 </p>
 
-    ---
+---
 기존에 제작했었던 프로젝트를 리펙토링을 통해 좀더 가독성이 좋은 코드로 개선하였습니다.
+[기존 프로젝트](https://github.com/JY-Dev/D_TIME)
 
 <p align="center">
-
-[기존 프로젝트](https://github.com/JY-Dev/D_TIME)
     <img src="https://user-images.githubusercontent.com/45057493/103400514-bdfc5c00-4b88-11eb-82c4-01979545d55b.png"/>
 </p>
 
